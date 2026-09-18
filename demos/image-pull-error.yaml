@@ -6,7 +6,7 @@ metadata:
     app: troubleshooting
 spec:
   containers:
-  - name: erroneous-container
+  - name: app-container-demo
     #old error code -Imagepullbackoff
     #image: nginx:this-tag-does-not-exist-999
     #New fixed code -stable Version 
