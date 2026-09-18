@@ -9,6 +9,6 @@ spec:
   - name: erroneous-container
     #old error code -Imagepullbackoff
     #image: nginx:this-tag-does-not-exist-999
-    #New fixed code -stable Version 
+    #New fixed code -stable Version given
     image: nginx:1.30.5
     imagePullPolicy: Always
