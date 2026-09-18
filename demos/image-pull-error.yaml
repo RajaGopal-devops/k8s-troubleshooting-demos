@@ -8,7 +8,7 @@ spec:
   containers:
   - name: app-container-demo
     #old error code -Imagepullbackoff
-    #image: nginx:this-tag-does-not-exist-999
+    image: nginx:this-tag-does-not-exist-999
     #New fixed code -stable Version 
-    image: nginx:1.30.5
+    #image: nginx:1.30.5
     imagePullPolicy: Always
