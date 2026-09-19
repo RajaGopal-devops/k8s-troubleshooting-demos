@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: crashloop-demo-pod
+  labels:
+    app: crashloop-test
+spec:
+  containers:
+  - name: crash-container
+    image: busybox
+    # ===================================================================
+    # Problem: Container exits immediately due to intentional exit command, causing CrashLoopBackOff error
+    # command: ["sh", "-c", "echo 'Application starting...'; exit 1"]
+    #====================================================================
+   
+   
+    # Solution: Using tail -f /dev/null to keep the container running continuously for troubleshooting
+    command: ["sh", "-c", "echo 'Application starting...'; tail -f /dev/null"]
+ 
